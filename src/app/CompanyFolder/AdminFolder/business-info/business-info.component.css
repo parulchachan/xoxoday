@@ -1,0 +1,28 @@
+.input-class{
+    border:0;
+    border-block-end: 1px solid rgb(77, 77, 77);
+    border-radius: 0;
+    font-size:13px;
+    padding: 3px 0  4px 0;
+    width:100%;
+    outline:none !important;
+}
+.input-class:focus{
+    border:0;
+    border-block-end: 1px solid blue;
+    outline:none !important ;
+}
+.labelCss{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 13px;
+    
+}
+.nav-head{
+    color:rgba(0, 0, 0, 0.54);
+    font-size:14px;
+    padding: 10px 16px;
+}
+active{
+    border-block-end: 1px solid blue;
+    color:blue;
+}

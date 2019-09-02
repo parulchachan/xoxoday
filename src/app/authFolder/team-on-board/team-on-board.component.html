@@ -1,0 +1,53 @@
+<div class="card mb-4 pl-md-4 pr-md-4" 
+    style="box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.05);" >
+    <div class="card-body text-center">
+
+        <img src="./../../../assets/images/team-onboard-step.svg">
+        <h3 class="mt-2 mb-2">Get your team on board</h3>
+        <p class="mb-4" style="font-size: 16px;">
+            Invite your team and start the journey of building an engaged and happy workforce.</p>
+        <div 
+            class="form-group" 
+            style="position: relative;">
+            <input 
+                type="email" 
+                name="email1" 
+                id="email1" 
+                class="form-control" 
+                placeholder="use1@abc.com"
+                required >
+        </div>
+        <div 
+            class="form-group" 
+            style="position: relative;">
+            <input 
+                type="email" 
+                name="email2" 
+                id="email2" 
+                class="form-control" 
+                placeholder="use2@abc.com" 
+                required>
+        </div>
+        <button 
+            type="button" 
+            style="float: left; border:none; background-color:#fff" 
+            class="btn btn-sm btn-light mb-3" >
+            <i class="fa fa-plus"></i> Add More
+        </button>
+        <hr>
+        <a
+            class="btn btn-default btn-block mt-5" 
+            style="text-align: center;"
+            type="button" 
+            routerLink="/signin"
+            onclick="inviteSubmit(event)" 
+            id="inviteButton" >
+            SEND INVITES
+        </a>
+        <p
+            style="margin-top: 20px; color:#FF7317;"
+            class=" text-center mb-3">
+            I will do this later
+        </p>
+    </div>
+</div>

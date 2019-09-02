@@ -1,0 +1,189 @@
+<h3 style="border-block-end: 2px solid blue; font-size:23px;">
+    <div class="header-icon mt-3 mb-3" style="display:inline-block;">
+        <img src="./../../../../assets/images/business-information.svg"  
+            class="img-fluid"
+            style="height:60px"
+            alt="">
+    </div>  
+    Business Information
+</h3>
+
+<div class="card mt-4 mb-4 ">
+    <nav class="nav nav-tabs">
+        <a 
+            class="nav-link active nav-head" 
+            id="business-tab"
+            data-toggle="tab"
+            href="#business" 
+            role="tab"
+            aria-controls="business"
+            aria-selected="true" >
+            BUSINESS INFORMATION
+        </a>
+        <a 
+            class="nav-link nav-head"
+            id="site-tab"
+            data-toggle="tab"
+            href="#site" 
+            role="tab"
+            aria-controls="site"
+            aria-selected="false" >
+            SITE INFORMATION</a>
+    </nav>
+    <div class="p-4 tab-content">
+        <div class="tab-pane show active">
+            <div  
+                class="row" 
+                id="business" 
+                role="tabpanel"
+                aria-labelledby="business-tab" 
+                style="margin:0 15px;">
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Company Name*</label>
+                    <div class="form-group">
+                    <input 
+                            id="company_name" 
+                            name="company_name" 
+                            placeholder="Enter company name" 
+                            required="" 
+                            type="text" 
+                            value=""
+                            autofocus="true"
+                            class="input-class">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Website*</label>
+                    
+                    <div>
+                        <input  
+                            id="website" 
+                            name="website" 
+                            placeholder="Please enter valid website url" 
+                            required="" 
+                            type="text" 
+                            value=""
+                            class="input-class">
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Tax Id*</label>
+                    <div class="">
+                        <input 
+                            id="gst" 
+                            name="gst" 
+                            placeholder="Please enter Tax ID number of 15 char length" 
+                            required="" 
+                            type="text" 
+                            value=""
+                            class="input-class">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Address*</label>
+                    <div class="">
+                        <input
+                            id="address" 
+                            name="address" 
+                            placeholder="Please enter street address" 
+                            maxlength="100" 
+                            required="" 
+                            type="text" 
+                            value=""
+                            class="input-class">
+                    </div>
+                    
+                    <span style="float: right; color: rgba(0, 0, 0, 0.54); font-size: 13px;">0/100</span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Zipcode*</label>
+                    <div class="">
+                        <input  
+                            id="zipcode" 
+                            name="zipcode" 
+                            placeholder="Please enter zipcode" 
+                            required="" 
+                            type="text" 
+                            value=""
+                            class="input-class">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Country*</label>
+                    <input 
+                        name="companyinformation_select_country" 
+                        required="" 
+                        type="text" 
+                        value=""
+                        class="input-class">
+                </div>
+            
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">State</label>
+                    <input 
+                        name="cstate"  
+                        value=""
+                        required="" 
+                        type="text" 
+                        class="input-class">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">City</label>
+                    <input 
+                        name="ccity"  
+                        value=""
+                        required="" 
+                        type="text" 
+                        class="input-class">
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="labelCss">Contact Number*</label>
+                    <input 
+                        name="cnumber"  
+                        value=""
+                        required="" 
+                        placeholder="Please enter contact number"
+                        type="tel" 
+                        class="input-class">
+                </div> 
+                <div class="col-12">
+                    <a href="./../admin/userManagement.html" 
+                        class="btn btn-primary" 
+                        style="float: right;">
+                        SUBMIT
+                    </a> 
+                </div>  
+            </div>
+        </div>
+        <div
+            class="tab-pane fade" 
+            id="site" 
+            role="tabpanel"
+            aria-labelledby="site-tab" 
+            style="margin:0 15px; height: auto;">
+
+            <div class="">
+            
+            
+                    <table class="table labelCss table-bordered" style="padding: 24px">
+                        <thead class="text-center">
+                            <th>Site Name</th>
+                            <th>Address</th>
+                        </thead>
+                        <tbody >
+                            <td colspan="2"  class="text-center">No Data</td>
+                        </tbody>
+                    </table>
+                <mat-paginator 
+                    [length]="0"
+                    [pageSize]="10"
+                    [pageSizeOptions]="[5, 10]">
+                </mat-paginator>
+
+            </div>
+        </div>
+
+    </div>    
+</div>

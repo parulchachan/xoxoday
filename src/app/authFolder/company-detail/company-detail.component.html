@@ -1,0 +1,39 @@
+<div class="card mb-4 pl-md-4 pr-md-4" 
+    style="box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.05);" >
+    <div class="card-body text-center ">
+
+        <img src="./../../../assets/images/compay-detail-step.svg">
+        <h3 class="mt-5 mb-5">Company Details</h3>
+        <div 
+            class="form-group row justify-content-center" 
+            style="position: relative;">
+            <input 
+                type="subDomain" 
+                name="subDomain" 
+                id="subDomain" 
+                class="form-control col-lg-7 col-sm-10" 
+                placeholder="Sub Domain" 
+                required="" 
+                autofocus="">
+            <label class="col-lg-4 col-sm-10" for="subDomain">.xoxoday.com</label>
+        </div>
+        <a
+            class="btn btn-default btn-block mt-5" 
+            type="button" 
+            routerLink="/auth/teamOnBoard"
+            onclick="cdSubmit(event)" 
+            id="cdButton" >
+            Submit
+        </a>
+        <p 
+            style="margin-top: 20px; margin-bottom:5px;  font-size:12px;" 
+            class="text-muted text-center">
+            The provided sub domain will be used to set up a microsite for your 
+        </p>
+        <p
+            style=" font-size:12px"
+            class="text-muted text-center mb-3">
+            company. For e.g. subdomain.xoxoday.com
+        </p>
+    </div>
+</div>

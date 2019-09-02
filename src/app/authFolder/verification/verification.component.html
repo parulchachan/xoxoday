@@ -1,0 +1,61 @@
+
+<div class="card mb-4 pl-md-4 pr-md-4" 
+    style="box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.05);" >
+    <div class="card-body text-center">
+
+        <img src="./../../../assets/images/verificationr-code-step.svg">
+        <h3 class="">Enter the verification code</h3>
+        <p class="mb-0">A 6 digit verification code has been sent</p>
+        <p class="mb-4">to the email id you provided.   </p>
+
+
+        <div class="form-group mb-5">
+            <input 
+                class="otpStyle" 
+                name="otp1"
+                placeholder="" 
+                maxlength="1" >
+            <input 
+                class="otpStyle " 
+                name="otp2" 
+                placeholder="" 
+                maxlength="1" >
+            <input 
+                class="otpStyle" 
+                name="otp3" 
+                placeholder="" 
+                maxlength="1" 
+                onkeyup="otpfocus(this, event)">
+            <input 
+                class="otpStyle" 
+                name="otp4" 
+                placeholder="" 
+                maxlength="1" >
+            <input 
+                class="otpStyle" 
+                name="otp5" 
+                placeholder=""
+                maxlength="1" >
+            <input 
+                class="otpStyle" 
+                name="otp6" 
+                placeholder=""
+                maxlength="1" >
+        </div>
+
+        <a 
+            class="btn btn-default btn-orange btn-block mt-5" 
+            type="button"
+            routerLink="/auth/setPassword" 
+            onclick="verifySubmit(event)" 
+            id="verifyButton" >
+            VERIFY
+        </a>
+        <p 
+            style="margin-top: 20px; font-size:12px" 
+            class="text-muted text-center mb-3">
+            Didn't receive the code? 
+            <span class="text-primary">Resend code</span>
+        </p>
+    </div>
+</div>
