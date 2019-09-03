@@ -3,135 +3,493 @@
     Reports
 </h3>
 
-<ul class="nav mt-5 mb-4" style="background-color: white;">
+<ul class="nav mt-5 mb-4 nav-tabs" role="tablist"  style="background-color: white;">
     <li class="nav-item pt-1 ">
-        <a class="nav-link active labelCss" href="#">Summary</a>
+        <a 
+        class="nav-link active labelCss"
+            id="summary-tab"
+            data-toggle="tab"
+            href="#summary" 
+            role="tab"
+            aria-controls="summary"
+            aria-selected="true">Summary</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss" href="#">Analytics</a>
+        <a 
+            class="nav-link labelCss"
+            id="analytics-tab"
+            data-toggle="tab"
+            href="#analytics" 
+            role="tab"
+            aria-controls="analytics"
+            aria-selected="false">Analytics</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss" href="#">Awards</a>
+        <a 
+            class="nav-link labelCss"
+            id="awards-tab"
+            data-toggle="tab"
+            href="#awards" 
+            role="tab"
+            aria-controls="awards"
+            aria-selected="false">Awards</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss" href="#">Budget</a>
+        <a 
+            class="nav-link labelCss"
+            id="budgets-tab"
+            data-toggle="tab"
+            href="#budgets" 
+            role="tab"
+            aria-controls="budgets"
+            aria-selected="false">Budget</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss" href="#">Redemption</a>
+        <a 
+            class="nav-link labelCss"
+            id="redemption-tab"
+            data-toggle="tab"
+            href="#redemption" 
+            role="tab"
+            aria-controls="redemption"
+            aria-selected="false">Redemption</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss " href="#">Pending Nomination</a>
+        <a 
+            class="nav-link labelCss "
+            id="pending-nomination-tab"
+            data-toggle="tab"
+            href="#pending-nomination" 
+            role="tab"
+            aria-controls="pending-nomination"
+            aria-selected="false">Pending Nomination</a>
     </li>
     <li class="nav-item pt-1">
-        <a class="nav-link labelCss" href="#">Gift</a>
+        <a 
+            class="nav-link labelCss"
+            id="gifts-tab"
+            data-toggle="tab"
+            href="#gifts" 
+            role="tab"
+            aria-controls="gifts"
+            aria-selected="false" >Gift</a>
     </li>
 </ul>
 
 
-<div class="card mt-4 mb-4" >
-    <div class="pl-3 pt-2">
-        <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+<div class="card mt-4 mb-4 tab-content" id="myTabContent">
+
+    <div 
+        class="tab-pane fade show active"
+        id="summary" 
+        role="tabpanel"
+        aria-labelledby="summary-tab">
+        <div class="pl-3 pt-2">
+            <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+        </div>
+        <div>
+            <div style="padding: 24px;">
+                <div class="row">
+                    <div class="form-group col-12">
+                        <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold; display:inline-block">
+                            Feed
+                        </h3>
+                        <select
+                            class="form-control input-class"
+                            style="width:150px;float: right;">
+                            <option value="" disabled selected>Select...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row"  style="padding: 24px;">
+                    
+                    <div class="col-md mr-4 rbox">
+                        <h3>1</h3>
+                        <label class="labelbox">Post Count</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Greetings Count</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Awards Count</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Appreciate Count</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>1</h3>
+                        <label class="labelbox">Total Count</label>
+                    </div>
+                </div>
+                <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
+                    Budget
+                </h3> 
+                <div class="row" style="padding: 24px;">
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Company Points</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Allocated Points</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Rewarded Points</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Redeemed Points</label>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
+                    Nomination
+                </h3> 
+                <div class="row" style="padding: 24px;">
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Nomination Completed</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Nomination Pending</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Nomination Rejected</label>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
+                    Employee
+                </h3> 
+                <div class="row" style="padding: 24px;">
+                    <div class="col-md mr-4 rbox">
+                        <h3>1</h3>
+                        <label class="labelbox">Active Employee</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>0</h3>
+                        <label class="labelbox">Inactive Employee</label>
+                    </div>
+                    <div class="col-md mr-4 rbox">
+                        <h3>1</h3>
+                        <label class="labelbox">Total Employee</label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <div style="padding: 24px;">
-            <div class="row">
-                <div class="form-group col-12">
-                    <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold; display:inline-block">
-                        Feed
-                    </h3>
-                    <select
-                        class="form-control input-class"
-                        style="width:150px;float: right;">
-                        <option value="" disabled selected>Select...</option>
-                    </select>
-                </div>
-            </div>
-
-                
-            <div class="row"  style="padding: 24px;">
-                
-                <div class="col-md mr-4 rbox">
-                    <h3>1</h3>
-                    <label class="labelbox">Post Count</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Greetings Count</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Awards Count</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Appreciate Count</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>1</h3>
-                    <label class="labelbox">Total Count</label>
-                </div>
-            </div>
-            <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
-                Budget
-            </h3> 
-            <div class="row" style="padding: 24px;">
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Company Points</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Allocated Points</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Rewarded Points</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Redeemed Points</label>
-                </div>
-            </div>
-
-
-            <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
-                Nomination
-            </h3> 
-            <div class="row" style="padding: 24px;">
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Nomination Completed</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Nomination Pending</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Nomination Rejected</label>
-                </div>
-            </div>
-
-            <h3 style="font-size: 16px; margin: 0 0 12px; font-weight: bold;">
-                Employee
-            </h3> 
-            <div class="row" style="padding: 24px;">
-                <div class="col-md mr-4 rbox">
-                    <h3>1</h3>
-                    <label class="labelbox">Active Employee</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>0</h3>
-                    <label class="labelbox">Inactive Employee</label>
-                </div>
-                <div class="col-md mr-4 rbox">
-                    <h3>1</h3>
-                    <label class="labelbox">Total Employee</label>
-                </div>
-            </div>
-
+    <div 
+        class="tab-pane fade" 
+        id="analytics" 
+        role="tabpanel"
+        aria-labelledby="analytics-tab">
+    </div>
+    <div 
+        class="tab-pane fade" 
+        id="awards" 
+        role="tabpanel"
+        aria-labelledby="awards-tab" >
+        <div class="pl-3 pt-2">
+            <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+            <img class="img-fluid" 
+                src="./../../../../assets/images/csv.svg" 
+                style="height:40px; width:40px; margin: 10px 20px 10px 5px; float: right;" >
+            <button 
+                class="btn btn-default" 
+                style="float: right; margin:10px"
+                data-toggle="modal"
+                data-target="#filterModal">
+                <i class="fa fa-filter"></i></button> 
+        </div>
+        
+        <div class="table-responsive-xl">
+            <table class="table labelCss" style="padding: 24px">
+                <thead>
+                    <th>Award Name</th>
+                    <th>Reward Value</th>
+                    <th>Recipient</th>
+                    <th>Nominator</th>
+                    <th>Budget Name</th>
+                    <th>Budget Owner Name</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </thead>
+                <tbody >
+                    <td colspan="8"  class="text-center">No Data</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div 
+        class="tab-pane fade" 
+        id="budgets" 
+        role="tabpanel"
+        aria-labelledby="budgets-tab" >
+        <div class="pl-3 pt-2">
+            <img class="img-fluid" 
+                src="./../../../../assets/images/csv.svg" 
+                style="height:40px; width:40px; margin: 10px 20px 10px 5px; float: right;" >
+            <button 
+                class="btn btn-default" 
+                style="float: right; margin:10px"
+                data-toggle="modal"
+                data-target="#filterModal">
+                <i class="fa fa-filter"></i></button> 
+        </div>
+        
+        <div class="table-responsive-xl">
+            <table class="table labelCss" style="padding: 24px">
+                <thead>
+                    <th>Budget Owner Name</th>
+                    <th>Budget Name</th>
+                    <th>Current Balance</th>
+                    <th>Status</th>
+                    <th>Expiry Date</th>
+                    <th>Parent Budget Owner</th>
+                </thead>
+                <tbody >
+                    <td colspan="6"  class="text-center">No Data</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div 
+        class="tab-pane fade" 
+        id="redemption" 
+        role="tabpanel"
+        aria-labelledby="redemption-tab" >
+        <div class="pl-3 pt-2">
+            <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+            <img class="img-fluid" 
+                src="./../../../../assets/images/csv.svg" 
+                style="height:40px; width:40px; margin: 10px 20px 10px 5px; float: right;" >
+            <button 
+                class="btn btn-default" 
+                style="float: right; margin:10px"
+                data-toggle="modal"
+                data-target="#filterModal">
+                <i class="fa fa-filter"></i></button> 
+        </div>
+        
+        <div class="table-responsive-xl">
+            <table class="table labelCss" style="padding: 24px">
+                <thead>
+                    <th>Transaction ID</th>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Points Redeemed</th>
+                    <th>Transaction Date</th>
+                    <th>Department</th>
+                    <th>Site</th>
+                    <th>Designation</th>
+                </thead>
+                <tbody >
+                    <td colspan="8"  class="text-center">No Data</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div 
+        class="tab-pane fade" 
+        id="pending-nomination" 
+        role="tabpanel"
+        aria-labelledby="pending-nomination-tab" >
+        <div class="pl-3 pt-2">
+            <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+            <img class="img-fluid" 
+                src="./../../../../assets/images/csv.svg" 
+                style="height:40px; width:40px; margin: 10px 20px 10px 5px; float: right;" >
+            <button 
+                class="btn btn-default" 
+                style="float: right; margin:10px"
+                data-toggle="modal"
+                data-target="#filterModal">
+                <i class="fa fa-filter"></i></button> 
+        </div>
+        
+        <div class="table-responsive-xl">
+            <table class="table labelCss" style="padding: 24px; vertical-align: center;">
+                <thead>
+                    <th>Award Name</th>
+                    <th>Nominator</th>
+                    <th>Current Level of approval</th>
+                    <th>Total Levels of approval</th>
+                    <th>Approver</th>
+                    <th>Days Since Nominationt</th>
+                    <th>Total Points</th>
+                </thead>
+                <tbody >
+                    <td colspan="7"  class="text-center">No Data</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div 
+        class="tab-pane fade" 
+        id="gifts" 
+        role="tabpanel"
+        aria-labelledby="gifts-tab" >
+        <div class="pl-3 pt-2">
+            <label class="rbox" style="border-radius:0;"for="">20-07-2019  &rarr; 19-08-2019</label>
+            <img class="img-fluid" 
+                src="./../../../../assets/images/csv.svg" 
+                style="height:40px; width:40px; margin: 10px 20px 10px 5px; float: right;" >
+            <button 
+                class="btn btn-default" 
+                style="float: right; margin:10px"
+                data-toggle="modal"
+                data-target="#filterModal">
+                <i class="fa fa-filter"></i></button> 
+        </div>
+        
+        <div class="table-responsive-xl">
+            <table class="table labelCss" style="padding: 24px; vertical-align: center;">
+                <thead>
+                    <th>Gift Value</th>
+                    <th>Greeting Event</th>
+                    <th>Receiver</th>
+                    <th>Sender</th>
+                    <th>Date</th>
+                </thead>
+                <tbody >
+                    <td colspan="5"  class="text-center">No Data</td>
+                </tbody>
+            </table>
         </div>
     </div>
 
 
+
+<div class="modal fade" id="filterModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialogmodal-dialog-centered " role="document"></div>
+        <div class="modal-content">
+            <div class="modal-body" id="exampleModalLabel" style="padding: 0; width:700px;">
+                <div class="card" style="padding:24px;" >
+                    <div class="row">
+                        <div class="col-12" style="padding: 12px" >
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                        
+                            <h3 class="" style="font-size: 16px; font-weight: bold; display:inline-block">
+                                Filters
+                            </h3>
+                            <div style="float:right;">
+                                <button class="btn btn-primary" style="float:right">APPLY</button>
+                                <button class="btn btn-default" style="float:right">RESET</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominator Department</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominator Designation</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominator Site</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominee Departments</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominee Designation</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="labelCss">Nominee Site</label>
+                            <div class="">
+                                <select
+                                    class="form-control input-class labelCss">
+                                    <option value="" disabled selected>ALL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                                <label class="labelCss">Approver Departments</label>
+                                <div class="">
+                                    <select
+                                        class="form-control input-class labelCss">
+                                        <option value="" disabled selected>ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="labelCss">Approver Designation</label>
+                                <div class="">
+                                    <select
+                                        class="form-control input-class labelCss">
+                                        <option value="" disabled selected>ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="labelCss">Approver Site</label>
+                                <div class="">
+                                    <select
+                                        class="form-control input-class labelCss">
+                                        <option value="" disabled selected>ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="labelCss">Awards</label>
+                                <div class="">
+                                    <select
+                                        class="form-control input-class labelCss">
+                                        <option value="" disabled selected>ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="labelCss">Budget Name</label>
+                                <div class="">
+                                    <select
+                                        class="form-control input-class labelCss">
+                                        <option value="" disabled selected>ALL</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>
+                
+            </div>  
+        </div>
+    </div>    
 </div>
+</div>
+

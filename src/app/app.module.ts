@@ -30,6 +30,7 @@ import { ManageBudgetsComponent } from './CompanyFolder/AwardsFolder/manage-budg
 import { AwardListComponent } from './CompanyFolder/AwardsFolder/award-list/award-list.component';
 import { AutomatedGreetingComponent } from './CompanyFolder/AwardsFolder/automated-greeting/automated-greeting.component';
 import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.component';
+import { DomainTownhallComponent } from './CompanyFolder/groupsFolder/domain-townhall/domain-townhall.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.
     ManageBudgetsComponent,
     AwardListComponent,
     AutomatedGreetingComponent,
-    ReportsComponent
+    ReportsComponent,
+    DomainTownhallComponent
   ],
   imports: [
     BrowserModule,

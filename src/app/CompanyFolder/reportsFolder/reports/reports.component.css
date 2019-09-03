@@ -22,15 +22,13 @@
     font-size:14px;
     padding: 10px 16px;
 }
-.active{
-    border-block-end: 1px solid blue;
-    color:blue;
-}
+
 .rbox{
     border: 1px solid #e6e6e6;
     padding: 15px;
     border-radius: 5%;
 }
+
 .labelbox{
     color: rgba(0, 0, 0, 0.691);
     font-size: 14px;

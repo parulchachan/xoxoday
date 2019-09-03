@@ -1,3 +1,4 @@
+import { DomainTownhallComponent } from './CompanyFolder/groupsFolder/domain-townhall/domain-townhall.component';
 import { AutomatedGreetingComponent } from './CompanyFolder/AwardsFolder/automated-greeting/automated-greeting.component';
 import { AwardListComponent } from './CompanyFolder/AwardsFolder/award-list/award-list.component';
 import { ManageBudgetsComponent } from './CompanyFolder/AwardsFolder/manage-budgets/manage-budgets.component';
@@ -38,6 +39,8 @@ const routes: Routes = [
     path: 'domain', 
     component: MainNavComponent,
     children:[
+      { path: '', component: DomainTownhallComponent},
+
     ]
   },
   { 
