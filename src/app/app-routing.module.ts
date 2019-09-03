@@ -1,3 +1,4 @@
+import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budgets/create-budget-folder/create-budget/create-budget.component';
 import { AddGiftComponent } from './CompanyFolder/AwardsFolder/automated-greeting/greeting-automation-folder/add-gift/add-gift.component';
 import { AddEmployeeComponent } from './CompanyFolder/AdminFolder/UM/add-employee/add-employee.component';
 import { DomainTownhallComponent } from './CompanyFolder/groupsFolder/domain-townhall/domain-townhall.component';
@@ -64,6 +65,7 @@ const routes: Routes = [
     children:[
       { path: 'appreciatelist', component: GiveAwardComponent },
       { path: 'budget', component: ManageBudgetsComponent },
+      { path: 'create-budget', component: CreateBudgetComponent},
       { path: 'awards', component: AwardListComponent},
       { path: 'giftslist', component: AutomatedGreetingComponent},
       { path: 'gifts', component: AddGiftComponent},

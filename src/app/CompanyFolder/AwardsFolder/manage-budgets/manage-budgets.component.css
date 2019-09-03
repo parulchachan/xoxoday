@@ -1,0 +1,16 @@
+.btn-primary {
+    background-color: #4054B2;
+    border-color: #4054B2;
+    color: #fff;
+    float: right;
+    border-radius: 30px;
+    padding: 4px 16px;
+    font-size:14px;
+    vertical-align: center;
+    cursor: pointer;
+}
+.title-float-right {
+    position: absolute;
+    right: 80px;
+    top:70px;
+}
