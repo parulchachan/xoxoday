@@ -1,1 +1,53 @@
-<p>user-management works!</p>
+<h3 style="border-block-end: 2px solid blue; font-size:23px;">
+    <div class="header-icon mt-3 mb-3" style="display:inline-block;">
+        <img src="./../../../../assets/images/user-management.svg"  
+            class="img-fluid"
+            style="height:60px"
+            alt="">
+    </div>  
+    User Management
+</h3>
+
+<div class="title-float-right">
+    <button tabindex="0" class="btn btn-primary" type="button" routerLink="/admin/add_employee"
+        title="Add Employee">
+        <mat-icon class="pt-1" style="vertical-align: center;" >add</mat-icon>
+    </button>
+    <button tabindex="0" class="btn btn-primary ml-2" type="button" routerLink="/admin/add_employee"
+        title="Bulk Upload">
+        <mat-icon class="pt-1" style="vertical-align: center;" >note_add</mat-icon>
+    </button>
+</div>
+
+<div class="card mt-5">
+    <div class="pl-3 pt-2">
+        <h4 style="display: inline-block; font-size: 18px; margin:10px;vertical-align: center;">
+            User List
+        </h4>
+        <button 
+            class="btn btn-default" 
+            style="float: right; margin:10px">
+            <mat-icon class="text-muted" style="vertical-align: center;" >filter_list</mat-icon>
+        </button> 
+        <button 
+            class="btn btn-default" 
+            style="float: right; margin:10px 0px;">
+            <mat-icon class="text-muted" style="vertical-align: center;" >search</mat-icon>
+            
+        </button> 
+    </div>
+
+    <div class="table-responsive-xl">
+        <table class="table labelCss" style="padding: 24px">
+            <thead>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Access Role</th>
+                <th>Status</th>
+            </thead>
+            <tbody >
+            </tbody>
+        </table>
+    </div>
+</div>

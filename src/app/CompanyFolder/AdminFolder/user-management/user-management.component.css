@@ -1,0 +1,28 @@
+.btn-primary {
+    background-color: #4054B2;
+    border-color: #4054B2;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.title-float-right {
+    position: absolute;
+    right: 80px;
+    top:68px;
+}
+.labelCss{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 13px;
+    
+}
+
+.rbox{
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+    border-radius: 5%;
+}
+
+.labelbox{
+    color: rgba(0, 0, 0, 0.691);
+    font-size: 14px;
+}

@@ -1,3 +1,5 @@
+import { AddGiftComponent } from './CompanyFolder/AwardsFolder/automated-greeting/greeting-automation-folder/add-gift/add-gift.component';
+import { AddEmployeeComponent } from './CompanyFolder/AdminFolder/UM/add-employee/add-employee.component';
 import { DomainTownhallComponent } from './CompanyFolder/groupsFolder/domain-townhall/domain-townhall.component';
 import { AutomatedGreetingComponent } from './CompanyFolder/AwardsFolder/automated-greeting/automated-greeting.component';
 import { AwardListComponent } from './CompanyFolder/AwardsFolder/award-list/award-list.component';
@@ -19,6 +21,7 @@ import { PlatformSettingsComponent } from './CompanyFolder/AdminFolder/platform-
 import { PointAdministrationComponent } from './CompanyFolder/AdminFolder/point-administration/point-administration.component';
 import { GiveAwardComponent } from './CompanyFolder/AwardsFolder/give-award/give-award.component';
 import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.component';
+import { LeaderboardComponent } from './CompanyFolder/LeaderboardFolder/leaderboard/leaderboard.component';
 
 
 const routes: Routes = [
@@ -51,6 +54,7 @@ const routes: Routes = [
       { path: 'platform', component: PlatformSettingsComponent },
       { path: 'billingInfo', component: BillingInfoComponent },
       { path: 'userManagement', component: UserManagementComponent},
+      { path: 'add_employee', component: AddEmployeeComponent},
       { path: 'pointAdministration', component: PointAdministrationComponent },
     ]
   },
@@ -62,6 +66,14 @@ const routes: Routes = [
       { path: 'budget', component: ManageBudgetsComponent },
       { path: 'awards', component: AwardListComponent},
       { path: 'giftslist', component: AutomatedGreetingComponent},
+      { path: 'gifts', component: AddGiftComponent},
+    ]
+  },
+  { 
+    path: 'leaderboard', 
+    component: MainNavComponent,
+    children:[
+      { path: '', component: LeaderboardComponent }
     ]
   },
   { 

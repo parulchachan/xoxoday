@@ -28,12 +28,20 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 .heading {
+  cursor: pointer;
   color:black;
    font-weight: 500; 
 }
 .sub-heading{
+  cursor: pointer;
    color:black;
    font-weight: 200; 
    font-size: 14px;
 }
+a:hover{
+  cursor: pointer;
+}
+.heading:hover{
+  background-color: rgb(168, 168, 248);
+  }
 
