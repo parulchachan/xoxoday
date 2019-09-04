@@ -1,0 +1,55 @@
+<h3 style="border-block-end: 2px solid blue; font-size:23px;">
+    <div class="header-icon mt-3 mb-3" style="display:inline-block;">
+        <img src="./../../../../assets/images/business-information.svg"  
+            class="img-fluid"
+            style="height:60px"
+            alt="">
+    </div>  
+    Business Information
+</h3>
+
+
+<div class="title-float-right">
+    <button tabindex="0" class="btn btn-border" type="button" routerLink="/admin/add_employee"
+        title="Add Employee">
+        <mat-icon class="pt-1" style="vertical-align: center;" >add</mat-icon>
+    </button>
+</div>
+
+<div class="card mt-5 mb-4 ">
+    <nav class="nav nav-tabs">
+        <a 
+            class="nav-link active nav-head"
+            routerLink="/admin/userInfo" >
+            BUSINESS INFORMATION
+        </a>
+        <a 
+            class="nav-link nav-head"
+            aria-selected="false" >
+            SITE INFORMATION</a>
+    </nav>
+    <div class="p-4">
+        <div 
+            style="margin:0 15px; height: auto;">
+
+            <div class="">
+                <table class="table labelCss table-bordered" style="padding: 24px">
+                    <thead class="text-center">
+                        <th>Site Name</th>
+                        <th>Address</th>
+                    </thead>
+                    <tbody >
+                        <td colspan="2"  class="text-center">No Data</td>
+                    </tbody>
+                </table>
+                <mat-paginator 
+                    [length]="0"
+                    [pageSize]="10"
+                    [pageSizeOptions]="[5, 10]">
+                </mat-paginator>
+            </div>
+        </div>
+
+    </div>    
+</div>
+    

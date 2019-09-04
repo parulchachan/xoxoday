@@ -23,6 +23,7 @@ import { PointAdministrationComponent } from './CompanyFolder/AdminFolder/point-
 import { GiveAwardComponent } from './CompanyFolder/AwardsFolder/give-award/give-award.component';
 import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.component';
 import { LeaderboardComponent } from './CompanyFolder/LeaderboardFolder/leaderboard/leaderboard.component';
+import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,7 @@ const routes: Routes = [
     component: MainNavComponent,
     children:[
       { path: 'userInfo', component: BusinessInfoComponent },
+      { path: 'userInfo/site', component: SiteInfoComponent },
       { path: 'platform', component: PlatformSettingsComponent },
       { path: 'billingInfo', component: BillingInfoComponent },
       { path: 'userManagement', component: UserManagementComponent},

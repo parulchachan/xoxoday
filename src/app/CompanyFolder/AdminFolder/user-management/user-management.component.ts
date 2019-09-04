@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../services/employee.service';
+import { Employee } from '../models/employee';
 
 @Component({
   selector: 'app-user-management',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-management.component.css']
 })
 export class UserManagementComponent implements OnInit {
-
-  constructor() { }
+  employees:Employee[]=[]
+  constructor(private employeeservice: EmployeeService) { }
 
   ngOnInit() {
+    this.employees=this.employeeservice.getEmployee();
   }
 
 }

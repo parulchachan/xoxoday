@@ -35,6 +35,8 @@ import { LeaderboardComponent } from './CompanyFolder/LeaderboardFolder/leaderbo
 import { AddEmployeeComponent } from './CompanyFolder/AdminFolder/UM/add-employee/add-employee.component';
 import { AddGiftComponent } from './CompanyFolder/AwardsFolder/automated-greeting/greeting-automation-folder/add-gift/add-gift.component';
 import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budgets/create-budget-folder/create-budget/create-budget.component';
+import { EmployeeService } from './CompanyFolder/AdminFolder/services/employee.service';
+import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,8 @@ import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budge
     LeaderboardComponent,
     AddEmployeeComponent,
     AddGiftComponent,
-    CreateBudgetComponent
+    CreateBudgetComponent,
+    SiteInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +80,9 @@ import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budge
     MatPaginatorModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

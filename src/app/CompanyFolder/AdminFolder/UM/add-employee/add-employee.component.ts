@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl, Validators} from '@angular/forms'
+import { EmployeeService } from '../../services/employee.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']
 })
-export class AddEmployeeComponent implements OnInit {
+export class AddEmployeeComponent {
+  
   form= new FormGroup({
     firstname: new FormControl('',Validators.required),
     lastname: new FormControl('',Validators.required),
@@ -34,9 +37,18 @@ export class AddEmployeeComponent implements OnInit {
     })
   })
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    private employeeservive: EmployeeService,
+    private router : Router,) 
+    {
   }
+
+  submit(){
+    console.log(this.form.value);
+    this.employeeservive.addEmployee(this.form.value);
+    this.employeeservive.printEmplyee();
+    this.router.navigate(['/admin/userManagement'])
+  }
+
 
 }

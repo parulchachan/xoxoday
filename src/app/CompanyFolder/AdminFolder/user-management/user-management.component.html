@@ -46,7 +46,14 @@
                 <th>Access Role</th>
                 <th>Status</th>
             </thead>
-            <tbody >
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <th>{{employee.email}}</th>
+                    <th>{{employee.firstname}}</th>
+                    <th>{{employee.department}}</th>
+                    <th>{{employee.AccessRole}}</th>
+                    <th>{{employee.status}}</th>
+                </tr>
             </tbody>
         </table>
     </div>
