@@ -16,7 +16,6 @@
   z-index: 1;
 }
 
-lo
 body {
   background-color: #f2f2f2;
 }
@@ -38,12 +37,9 @@ body {
    font-weight: 200; 
    font-size: 14px;
 }
-a:hover{
-  cursor: pointer;
-}
-.heading:hover{
-  background-color: #8998E1;
-  }
+
+
 li:hover{
   background-color: #8998E1;
 }
+

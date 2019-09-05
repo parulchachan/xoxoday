@@ -15,16 +15,16 @@
     </mat-toolbar>
     <mat-nav-list class="mt-5">
       <!-- <a mat-list-item href="#">Link 1</a> -->
-      <a 
-        class="nav-link heading"
+      <ul 
+        class="nav-link heading mb-0"
         data-toggle="collapse" 
         data-target="#collapseGroups" 
         aria-expanded="false" 
         aria-controls="collapseGroups">
         Groups
-        <ul class="mt-2 collapse" id="collapseGroups">
+        <div class="collapse" id="collapseGroups">
             <li 
-              class="nav-link sub-heading pl-0 ml-0"
+              class="nav-link sub-heading pl-4"
               routerLink="/domain">
                 <img 
                     src="./../../../assets/images/company-board.png  " 
@@ -33,17 +33,17 @@
                     class="img-fluid ">
                 Arvgem Townhall
             </li>
-        </ul>
-      </a>
-      <a 
-        class="nav-link heading" 
+        </div>
+      </ul>
+      <ul
+        class="nav-link heading mb-0" 
         data-toggle="collapse" 
         data-target="#collapseAwards" 
         aria-expanded="false" 
         aria-controls="collapseAwards">
         Awards
-        <ul class="  collapse" id="collapseAwards">
-            <li class="nav-link sub-heading pl-0" routerLink="/award/appreciatelist">
+        <div class="  collapse" id="collapseAwards">
+            <li class="nav-link sub-heading pl-4" routerLink="/award/appreciatelist">
                 <img 
                     src="./../../../assets/images/given-award.svg" 
                     style="border-radius: 50%; border: 1px solid rgb(218, 216, 216); 
@@ -51,7 +51,7 @@
                     class="img-fluid ">
                 Give an Award
             </li>
-            <li class="nav-link sub-heading pl-0" routerLink="/award/budget">
+            <li class="nav-link sub-heading pl-4" routerLink="/award/budget">
                 <img 
                     src="./../../../assets/images/manage-budget.svg" 
                     style="border-radius: 50%; border: 1px solid rgb(218, 216, 216); 
@@ -59,7 +59,7 @@
                     class="img-fluid ">
                 Manage Budgets
             </li>
-            <li class="nav-link sub-heading pl-0"  routerLink="/award/awards">
+            <li class="nav-link sub-heading pl-4"  routerLink="/award/awards">
                 <img 
                     src="./../../../assets/images/award-list.svg" 
                     style="border-radius: 50%; border: 1px solid rgb(218, 216, 216); 
@@ -67,7 +67,7 @@
                     class="img-fluid ">
                 Award List
             </li>
-            <li class="nav-link sub-heading pl-0"  routerLink="/award/giftslist">
+            <li class="nav-link sub-heading pl-4"  routerLink="/award/giftslist">
                 <img 
                     src="./../../../assets/images/automated-gifts.svg" 
                     style="border-radius: 50%; border: 1px solid rgb(218, 216, 216); 
@@ -75,57 +75,57 @@
                     class="img-fluid ">
                 Automated Greeting
             </li>
-        </ul>
-      </a>
-      <a class="nav-link heading">Redeem Points</a>
-      <a class="nav-link heading" routerLink="/leaderboard">Leaderboard</a>
-      <a 
-        class="nav-link heading" 
+          </div>
+      </ul>
+      <ul class="nav-link heading mb-0">Redeem Points</ul>
+      <ul class="nav-link heading mb-0" routerLink="/leaderboard">Leaderboard</ul>
+      <ul
+        class="nav-link heading mb-0" 
         data-toggle="collapse" 
         data-target="#collapseAdmin" 
         aria-expanded="false" 
         aria-controls="collapseAdmin">
         Admin
-        <ul class="mt-2 collapse" id="collapseAdmin">
-            <li class="nav-link sub-heading pl-0 active" routerLink="/admin/userInfo">
+        <div class="collapse" id="collapseAdmin">
+            <li class="nav-link sub-heading pl-4 active" routerLink="/admin/userInfo">
                 <img 
                     src="./../../../assets/images/business-information.svg" 
                     style="border-radius: 50%; border: 1px solid rgb(218, 216, 216); 
                             background-color: white" 
                     class="img-fluid">
                 Business Information</li>
-            <li class="nav-link sub-heading pl-0" routerLink="/admin/platform">
+            <li class="nav-link sub-heading pl-4" routerLink="/admin/platform">
                 <img 
                 src="./../../../assets/images/platform-settings.svg" 
                 style="border-radius: 50%; border: 1px solid rgb(218, 216, 216);
                   background-color: white;" 
                 class="img-fluid ">
                 Platform Settings</li>
-            <li class="nav-link sub-heading pl-0" routerLink="/admin/billingInfo">
+            <li class="nav-link sub-heading pl-4" routerLink="/admin/billingInfo">
                 <img 
                 src="./../../../assets/images/billing-information.svg" 
                 style="border-radius: 50%; border: 1px solid rgb(218, 216, 216);
                   background-color: white;" 
                 class="img-fluid ">
                 Billing Information</li>
-            <li class="nav-link sub-heading pl-0" routerLink="/admin/userManagement">
+            <li class="nav-link sub-heading pl-4" routerLink="/admin/userManagement">
                 <img 
                 src="./../../../assets/images/user-management.svg" 
                 style="border-radius: 50%; border: 1px solid rgb(218, 216, 216);
                   background-color: white;" 
                 class="img-fluid ">
                 User Management</li>
-            <li class="nav-link sub-heading pl-0" routerLink="/admin/pointAdministration">
+            <li class="nav-link sub-heading pl-4" routerLink="/admin/pointAdministration">
                 <img 
                 src="./../../../assets/images/points-administration.svg" 
                 style="border-radius: 50%; border: 1px solid rgb(218, 216, 216);
                   background-color: white;" 
                 class="img-fluid ">
                 Point Administration</li>
-        </ul>
-      </a>
-      <a class="nav-link heading" routerLink="/reports">Reports</a>
-      <a class="nav-link heading">Help Center</a>
+            </div>
+      </ul>
+      <ul class="nav-link heading mb-0" routerLink="/reports">Reports</ul>
+      <ul class="nav-link heading mb-0">Help Center</ul>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav #drawer2 position="end" class="sidenav2" 

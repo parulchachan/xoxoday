@@ -18,9 +18,11 @@ export class DomainTownhallComponent implements OnInit {
   }
 
   Post(){
+    if(this.form.get('message').value){
     this.messages.push(this.form.get('message').value);
     console.log(this.messages);
     this.form.reset();
+    }
   }  
 
 }
