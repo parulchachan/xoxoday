@@ -37,7 +37,7 @@ export class AddEmployeeComponent {
     })
   })
 
-  constructor(
+  constructor( 
     private employeeservive: EmployeeService,
     private router : Router,) 
     {

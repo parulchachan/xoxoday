@@ -12,4 +12,12 @@ export class VerificationComponent implements OnInit {
   ngOnInit() {
   }
 
+  keytab(event){
+    let element = event.srcElement.nextElementSibling;
+    if(element == null)
+        return;
+    else
+        element.focus();
+  }
+
 }
