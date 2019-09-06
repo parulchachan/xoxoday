@@ -20,11 +20,8 @@ export class SignupComponent {
 
   onSubmit(){
     if(this.signupform.valid){
-      console.log("12")
       this.router.navigate(['/auth/verification'])
     }
-    console.log("1234")
-
   }
 
 }

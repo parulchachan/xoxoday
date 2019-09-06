@@ -8,55 +8,40 @@
         <p class="mb-0">A 6 digit verification code has been sent</p>
         <p class="mb-4">to the email id you provided.   </p>
 
-
-        <div class="form-group mb-5">
-            <input 
-                class="otpStyle" 
-                name="otp1"
-                type="number"
-                onkeyup="keytab($event)"
-                maxlength="1">
-            <input 
-                class="otpStyle " 
-                name="otp2" 
-                type="number"
-                placeholder="" 
-                maxlength="1" >
-            <input 
-                class="otpStyle" 
-                name="otp3"
-                type="number" 
-                placeholder="" 
-                maxlength="1" 
-                onkeyup="otpfocus(this, event)">
-            <input 
-                class="otpStyle" 
-                name="otp4"
-                type="number" 
-                placeholder="" 
-                maxlength="1" >
-            <input 
-                class="otpStyle" 
-                name="otp5" 
-                type="number"
-                placeholder=""
-                maxlength="1" >
-            <input 
-                class="otpStyle" 
-                name="otp6"
-                type="number" 
-                placeholder=""
-                maxlength="1" >
-        </div>
-
-        <a 
-            class="btn btn-default btn-orange btn-block mt-5" 
-            type="button"
-            routerLink="/auth/setPassword" 
-            onclick="verifySubmit(event)" 
-            id="verifyButton" >
-            VERIFY
-        </a>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()"> 
+            <div class="form-group mb-5">
+                <input
+                    formControlName="otp1" 
+                    class="otpStyle" 
+                    type="number">
+                <input
+                    formControlName="otp2" 
+                    class="otpStyle " 
+                    type="number" >
+                <input
+                    formControlName="otp3" 
+                    class="otpStyle" 
+                    type="number" >
+                <input 
+                    formControlName="otp4"
+                    class="otpStyle"
+                    type="number" >
+                <input
+                    formControlName="otp5" 
+                    class="otpStyle" 
+                    type="number" >
+                <input 
+                    formControlName="otp6"
+                    class="otpStyle" 
+                    type="number">
+            </div>
+            <button 
+                class="btn btn-default btn-orange btn-block mt-5" 
+                type="submit"
+                [disabled]="!form.valid" >
+                VERIFY
+            </button>
+        </form>
         <p 
             style="margin-top: 20px; font-size:12px" 
             class="text-muted text-center mb-3">
