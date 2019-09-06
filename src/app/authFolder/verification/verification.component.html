@@ -13,27 +13,33 @@
                 <input
                     formControlName="otp1" 
                     class="otpStyle" 
-                    type="number">
+                    type="number"
+                    (keyup)="otpfocus(this,event)">
                 <input
                     formControlName="otp2" 
                     class="otpStyle " 
-                    type="number" >
+                    type="number"
+                    (keyup)="otpfocus(this,event)">                     
                 <input
                     formControlName="otp3" 
                     class="otpStyle" 
-                    type="number" >
+                    type="number" 
+                    (keyup)="otpfocus(this,event)">
                 <input 
                     formControlName="otp4"
                     class="otpStyle"
-                    type="number" >
+                    type="number" 
+                    (keyup)="otpfocus(this,event)">
                 <input
                     formControlName="otp5" 
                     class="otpStyle" 
-                    type="number" >
+                    type="number"
+                    (keyup)="otpfocus(this,event)" >
                 <input 
                     formControlName="otp6"
                     class="otpStyle" 
-                    type="number">
+                    type="number"
+                    (keyup)="otpfocus(this,event)">
             </div>
             <button 
                 class="btn btn-default btn-orange btn-block mt-5" 

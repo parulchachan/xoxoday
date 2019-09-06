@@ -25,4 +25,8 @@ export class VerificationComponent  {
     }
   }
 
+  otpfocus(t,e){
+    console.log('hi')
+  }
+
 }
