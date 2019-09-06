@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './services/in-memory-data.service';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +42,7 @@ import { AddGiftComponent } from './CompanyFolder/AwardsFolder/automated-greetin
 import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budgets/create-budget-folder/create-budget/create-budget.component';
 import { EmployeeService } from './CompanyFolder/AdminFolder/services/employee.service';
 import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
+import { AuthService } from './authFolder/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -78,10 +84,14 @@ import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-in
     MatListModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [
-    EmployeeService
+    EmployeeService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
