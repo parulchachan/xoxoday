@@ -91,7 +91,8 @@ import { AuthService } from './authFolder/services/auth.service';
   ],
   providers: [
     EmployeeService,
-    AuthService
+    AuthService,
+    
   ],
   bootstrap: [AppComponent]
 })

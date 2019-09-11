@@ -27,7 +27,7 @@ import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-in
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/auth/signup', pathMatch: 'full' },
+  { path: '', redirectTo: '/signin', pathMatch: 'full' },
   { 
     path: 'auth', 
     component: AuthNavComponent,

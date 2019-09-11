@@ -28,6 +28,10 @@ export class SignupComponent {
       this.authservice.addEmailId(this.signupform.value as RegistrationDetails).subscribe(data => {
         console.log(data)
       });
+      this.authservice.getResitrationDetail().subscribe(data => {
+        console.log(data)
+      });
+
       this.router.navigate(['/auth/verification'])
       // this.authservice.getfirstname('parul').subscribe(data=>console.log(data))
     }

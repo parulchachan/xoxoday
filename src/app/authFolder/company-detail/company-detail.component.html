@@ -4,36 +4,31 @@
 
         <img src="./../../../assets/images/compay-detail-step.svg">
         <h3 class="mt-5 mb-5">Company Details</h3>
-        <div 
-            class="form-group row justify-content-center" 
-            style="position: relative;">
-            <input 
-                type="subDomain" 
-                name="subDomain" 
-                id="subDomain" 
-                class="form-control col-lg-7 col-sm-10" 
-                placeholder="Sub Domain" 
-                required="" 
-                autofocus="">
-            <label class="col-lg-4 col-sm-10" for="subDomain">.xoxoday.com</label>
-        </div>
-        <a
-            class="btn btn-default btn-block mt-5" 
-            type="button" 
-            routerLink="/auth/teamOnBoard"
-            onclick="cdSubmit(event)" 
-            id="cdButton" >
-            Submit
-        </a>
-        <p 
-            style="margin-top: 20px; margin-bottom:5px;  font-size:12px;" 
-            class="text-muted text-center">
-            The provided sub domain will be used to set up a microsite for your 
-        </p>
-        <p
-            style=" font-size:12px"
-            class="text-muted text-center mb-3">
-            company. For e.g. subdomain.xoxoday.com
-        </p>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div 
+                class="form-group row justify-content-center" 
+                style="position: relative;">
+                <input 
+                    formControlName="domainName"
+                    class="form-control col-lg-7 col-sm-10" 
+                    placeholder="Sub Domain">
+                <label class="col-lg-4 col-sm-10" for="subDomain">.xoxoday.com</label>
+            </div>
+            <button
+                class="btn btn-default btn-block mt-5" 
+                type="submit" >
+                Submit
+            </button>
+            <p 
+                style="margin-top: 20px; margin-bottom:5px;  font-size:12px;" 
+                class="text-muted text-center">
+                The provided sub domain will be used to set up a microsite for your 
+            </p>
+            <p
+                style=" font-size:12px"
+                class="text-muted text-center mb-3">
+                company. For e.g. subdomain.xoxoday.com
+            </p>
+        </form>
     </div>
 </div>
