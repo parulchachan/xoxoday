@@ -43,6 +43,7 @@ import { CreateBudgetComponent } from './CompanyFolder/AwardsFolder/manage-budge
 import { EmployeeService } from './CompanyFolder/AdminFolder/services/employee.service';
 import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
 import { AuthService } from './authFolder/services/auth.service';
+import { AuthGaurdService } from './services/auth-gaurd.service';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,7 @@ import { AuthService } from './authFolder/services/auth.service';
   providers: [
     EmployeeService,
     AuthService,
-    
+    AuthGaurdService
   ],
   bootstrap: [AppComponent]
 })

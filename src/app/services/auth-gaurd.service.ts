@@ -5,15 +5,16 @@ import { AuthService } from '../authFolder/services/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGaurdService implements CanActivate {
-  canActivate(route,state: RouterStateSnapshot){
-    return this.auth.user$.map(user=>{
-      if(user) return true;
-      this.router.navigate(['/domain']);
-      return false;
-   }); 
-  }
-  constructor(private auth:AuthService,private router:Router) {
 
-   }
+export class AuthGaurdService implements CanActivate {
+  constructor(private auth:AuthService,private router:Router) {
+  }
+
+  canActivate(route){
+    let result= this.auth.isLoggedIn();
+      if(result) return true;
+
+      this.router.navigate(['/signin']);
+      return false;
+  }
 }

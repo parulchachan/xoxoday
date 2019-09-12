@@ -13,27 +13,26 @@ export class SignupComponent {
 
   constructor(private router : Router,private authservice: AuthService) { }
 
-
+  invalidSignup=false;
   signupform = new FormGroup({
     firstName: new FormControl('',Validators.required),
     lastName: new FormControl(''),
-    email: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl(''),
-    domain: new FormControl(''),
-    teamIds: new FormControl(''),
+    email: new FormControl('',[Validators.required])
   });
 
   onSubmit(){
     if(this.signupform.valid){
-      this.authservice.addEmailId(this.signupform.value as RegistrationDetails).subscribe(data => {
-        console.log(data)
-      });
-      this.authservice.getResitrationDetail().subscribe(data => {
-        console.log(data)
-      });
-
-      this.router.navigate(['/auth/verification'])
-      // this.authservice.getfirstname('parul').subscribe(data=>console.log(data))
+      this.authservice.getid(this.signupform.get('email').value).subscribe(data=>{
+        if(data.length){
+          this.invalidSignup=true;
+        }else{
+          this.authservice.addEmailId(this.signupform.value as RegistrationDetails).subscribe(data => {
+            console.log(data)
+          });
+          localStorage.setItem('email',this.signupform.get('email').value);
+          this.router.navigate(['/auth/verification'])
+        }
+      })
     }
   }
 

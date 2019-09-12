@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  invalidLogin=false;
   form = new FormGroup({
     email: new FormControl('parul.chachan',[Validators.required]),
     password: new FormControl('123',[Validators.required]),
@@ -21,16 +22,11 @@ export class SignInComponent implements OnInit {
 
   onSubmit(){
     if(this.form.valid){
-      this.authService.getid(this.form.get('email').value,this.form.get('password').value).subscribe(user=>{
-        if(user.length){
-          this.router.navigate(['/domain']);
-          console.log(user);
-        }
-        else
-        alert('Either Username or Password invalid')
-      })
-
-    }
+      this.authService.login(this.form.get('email').value,this.form.get('password').value).subscribe(result=>{
+        if(result) this.router.navigate(['/domain']) ;
+        this.invalidLogin=true;
+      });
+    }     
   }
 
 }

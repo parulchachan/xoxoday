@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RegistrationDetails } from '../models/RegistrationDetails';
-import { tap, catchError } from 'rxjs/operators';
+import { tap, catchError, map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +15,7 @@ export class AuthService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
 
   getResitrationDetail () {
@@ -23,26 +23,45 @@ export class AuthService {
   }
 
   addEmailId(data:RegistrationDetails){
-    console.log(data);
     return this.http.post(this.authDetailUrl, data, this.httpOptions);
   }
 
-  getfirstname(data){
-    return this.http.get<RegistrationDetails[]>('api/registrationDetails?firstname='+data);
+  updatePassword(id,data){
+   return this.http.put(`${this.authDetailUrl}/?id=${id}&:password?`, data);
   }
 
-  getid(email,password){
-    return this.http.get<RegistrationDetails[]>(`${this.authDetailUrl}/?email=${email}&password=${password}`);
+  getUser(id){
+    return this.http.get<RegistrationDetails[]>('api/registrationDetails/?id='+id);
   }
 
-  // get appUser$(){
-  //   return this.user$
-  //     .switchMap(user => {
-  //       if(user) return this.userService.get(user.uid).valueChanges(); 
+  getid(email){
+    return  this.http.get<RegistrationDetails[]>(`${this.authDetailUrl}/?email=${email}`);
+  }
 
-  //       return of(null);
-  //       })
-  // }
+  login(email,password){
+    return this.http.get<RegistrationDetails[]>(`${this.authDetailUrl}/?email=${email}&password=${password}`).pipe(
+      map(response=>{
+       console.log('inside login response', response);
+       if(response && response.length){
+         localStorage.setItem('token',response[0].id.toString());
+         return true;
+       }
+       return false;
+      })
+    )
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+  }
+
+  isLoggedIn(){
+    let id=+localStorage.getItem('token');
+    if(id){
+      return true;
+    }
+    else return false;
+  }
 
 
 

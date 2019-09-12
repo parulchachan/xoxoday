@@ -24,10 +24,11 @@ import { GiveAwardComponent } from './CompanyFolder/AwardsFolder/give-award/give
 import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.component';
 import { LeaderboardComponent } from './CompanyFolder/LeaderboardFolder/leaderboard/leaderboard.component';
 import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
+import { AuthGaurdService } from './services/auth-gaurd.service';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/signin', pathMatch: 'full' },
+  { path: '', redirectTo: '/domain', pathMatch: 'full' },
   { 
     path: 'auth', 
     component: AuthNavComponent,
@@ -43,14 +44,16 @@ const routes: Routes = [
   { 
     path: 'domain', 
     component: MainNavComponent,
+    canActivate:[AuthGaurdService],
     children:[
       { path: '', component: DomainTownhallComponent},
-
+    
     ]
   },
   { 
     path: 'admin', 
     component: MainNavComponent,
+    canActivate:[AuthGaurdService],
     children:[
       { path: 'userInfo', component: BusinessInfoComponent },
       { path: 'userInfo/site', component: SiteInfoComponent },
@@ -63,6 +66,7 @@ const routes: Routes = [
   },
   { 
     path: 'award', 
+    canActivate:[AuthGaurdService],
     component: MainNavComponent,
     children:[
       { path: 'appreciatelist', component: GiveAwardComponent },
@@ -74,14 +78,16 @@ const routes: Routes = [
     ]
   },
   { 
-    path: 'leaderboard', 
+    path: 'leaderboard',
+    canActivate:[AuthGaurdService], 
     component: MainNavComponent,
     children:[
       { path: '', component: LeaderboardComponent }
     ]
   },
   { 
-    path: 'reports', 
+    path: 'reports',
+    canActivate:[AuthGaurdService], 
     component: MainNavComponent,
     children:[
       { path: '', component: ReportsComponent},
