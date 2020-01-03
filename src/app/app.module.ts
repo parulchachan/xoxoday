@@ -44,6 +44,7 @@ import { EmployeeService } from './CompanyFolder/AdminFolder/services/employee.s
 import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
 import { AuthService } from './authFolder/services/auth.service';
 import { AuthGaurdService } from './services/auth-gaurd.service';
+import { AddAwardComponent } from './CompanyFolder/AwardsFolder/award-list/add-award/add-award.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { AuthGaurdService } from './services/auth-gaurd.service';
     AddEmployeeComponent,
     AddGiftComponent,
     CreateBudgetComponent,
-    SiteInfoComponent
+    SiteInfoComponent,
+    AddAwardComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,8 @@ import { ReportsComponent } from './CompanyFolder/reportsFolder/reports/reports.
 import { LeaderboardComponent } from './CompanyFolder/LeaderboardFolder/leaderboard/leaderboard.component';
 import { SiteInfoComponent } from './CompanyFolder/AdminFolder/site-info/site-info.component';
 import { AuthGaurdService } from './services/auth-gaurd.service';
+import { AddAwardComponent } from './CompanyFolder/AwardsFolder/award-list/add-award/add-award.component';
+
 
 
 const routes: Routes = [
@@ -73,6 +75,7 @@ const routes: Routes = [
       { path: 'budget', component: ManageBudgetsComponent },
       { path: 'create-budget', component: CreateBudgetComponent},
       { path: 'awards', component: AwardListComponent},
+      { path: 'add-award', component: AddAwardComponent},
       { path: 'giftslist', component: AutomatedGreetingComponent},
       { path: 'gifts', component: AddGiftComponent},
     ]

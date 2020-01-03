@@ -17,6 +17,7 @@ export class SetPasswordComponent implements OnInit {
   constructor(private router : Router,private auth:AuthService) { }
 
   ngOnInit() {
+    
   }
 
   onSubmit(){
